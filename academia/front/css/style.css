@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.d-flex {
+    height: 100vh;
+}
+
+#sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #212529;
+    color: white;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.closed {
+    width: 70px;
+}
+
+#sidebar .text,
+#sidebar h4 {
+    transition: opacity 0.2s;
+}
+
+#sidebar.closed .text,
+#sidebar.closed h4 {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#sidebar button {
+    white-space: nowrap;
+}
+
+#sidebar.closed button {
+    text-align: center;
+}
+
+#sidebar ul {
+    flex-grow: 1;
+}
+
+#sidebar ul li button {
+    width: 100%;
+    border: none;
+    background: none;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+#sidebar ul li button:hover {
+    background: #343a40;
+}
+
+.flex-grow-1 {
+    overflow-y: auto;
+}
